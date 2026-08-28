@@ -1,1 +1,2153 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="MathLogic - Mathematics learning resources, lectures, notes and preparation for Class 9, Class 10, Class 11, Class 12, BS Mathematics, BS Computer Science and PPSC Lecturer preparation.">
+
+    <meta name="keywords" content="MathLogic, mathematics, maths, Class 9 maths, Class 10 maths, Class 11 maths, Class 12 maths, BS Mathematics, BS CS mathematics, PPSC Lecturer, mathematics notes">
+
+    <meta name="author" content="MathLogic">
+
+    <title>MathLogic | Mathematics Made Clear</title>
+
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+    <style>
+
+        /* =========================================================
+           MATHLOGIC.PK - MAIN STYLES
+           ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #202124;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           TOP BAR
+           ========================================================= */
+
+        .top-bar {
+            background: #111111;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .top-bar-inner {
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+        }
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 26px;
+            font-weight: 800;
+            color: #111111;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-name span {
+            color: #c8102e;
+        }
+
+        .brand-tagline {
+            font-size: 12px;
+            color: #777777;
+            letter-spacing: 0.4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333333;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #c8102e;
+        }
+
+        .youtube-nav {
+            background: #c8102e;
+            color: #ffffff !important;
+            padding: 11px 18px;
+            border-radius: 8px;
+        }
+
+        .youtube-nav:hover {
+            background: #a90d26;
+        }
+
+        .menu-button {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+            color: #111111;
+        }
+
+        /* =========================================================
+           ADVERTISEMENT
+           ========================================================= */
+
+        .ad-container {
+            width: 100%;
+            min-height: 90px;
+            border: 1px dashed #d7d7d7;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999999;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin: 24px 0;
+            text-transform: uppercase;
+        }
+
+        .ad-container.large {
+            min-height: 140px;
+        }
+
+        .ad-container.small {
+            min-height: 70px;
+        }
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(200,16,46,0.12), transparent 30%),
+                linear-gradient(135deg, #fff7f8 0%, #ffffff 55%, #f7f7f7 100%);
+            padding: 75px 0 70px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            color: #c8102e;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.04;
+            letter-spacing: -2px;
+            color: #111111;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #c8102e;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 21px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: #c8102e;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #a90d26;
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .btn-dark:hover {
+            background: #2a2a2a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: #dddddd;
+            background: #ffffff;
+            color: #222222;
+        }
+
+        .btn-outline:hover {
+            border-color: #c8102e;
+            color: #c8102e;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: #111111;
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 38px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: #c8102e;
+            right: -70px;
+            top: -70px;
+            opacity: 0.9;
+        }
+
+        .hero-card::after {
+            content: "∑";
+            position: absolute;
+            right: 35px;
+            bottom: 5px;
+            font-size: 150px;
+            font-weight: 900;
+            color: rgba(255,255,255,0.07);
+        }
+
+        .math-symbol {
+            font-size: 68px;
+            font-weight: 700;
+            color: #c8102e;
+            margin-bottom: 15px;
+        }
+
+        .hero-card h2 {
+            font-size: 28px;
+            max-width: 300px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card p {
+            margin-top: 14px;
+            color: #cccccc;
+            max-width: 310px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* =========================================================
+           SECTION GENERAL
+           ========================================================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 38px;
+        }
+
+        .section-label {
+            color: #c8102e;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            color: #111111;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        /* =========================================================
+           CLASSES
+           ========================================================= */
+
+        .classes-section {
+            background: #ffffff;
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .class-card {
+            border: 1px solid #e9e9e9;
+            border-radius: 14px;
+            padding: 25px;
+            background: #ffffff;
+            transition: 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            border-color: #c8102e;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .class-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: #c8102e;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .class-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #171717;
+        }
+
+        .class-card p {
+            font-size: 14px;
+            color: #777777;
+            margin-bottom: 18px;
+        }
+
+        .card-link {
+            color: #c8102e;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           UNIVERSITY / PREPARATION
+           ========================================================= */
+
+        .advanced-section {
+            background: #f7f7f7;
+        }
+
+        .advanced-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .advanced-card {
+            background: #111111;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            min-height: 200px;
+            transition: 0.2s ease;
+        }
+
+        .advanced-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .advanced-icon {
+            font-size: 32px;
+            color: #c8102e;
+            margin-bottom: 18px;
+        }
+
+        .advanced-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .advanced-card p {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           YOUTUBE
+           ========================================================= */
+
+        .youtube-section {
+            background: #ffffff;
+        }
+
+        .youtube-layout {
+            display: grid;
+            grid-template-columns: 1fr 0.85fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .youtube-box {
+            background: #111111;
+            border-radius: 20px;
+            padding: 40px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .youtube-box::after {
+            content: "▶";
+            position: absolute;
+            right: -10px;
+            bottom: -55px;
+            font-size: 200px;
+            color: rgba(200,16,46,0.12);
+        }
+
+        .youtube-play {
+            width: 70px;
+            height: 50px;
+            border-radius: 14px;
+            background: #c8102e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .youtube-box h3 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .youtube-box p {
+            color: #cccccc;
+            margin-bottom: 25px;
+            max-width: 520px;
+        }
+
+        .video-placeholder {
+            border: 1px solid #e8e8e8;
+            border-radius: 16px;
+            min-height: 300px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .video-placeholder-inner {
+            max-width: 360px;
+        }
+
+        .video-placeholder-icon {
+            font-size: 48px;
+            color: #c8102e;
+            margin-bottom: 15px;
+        }
+
+        .video-placeholder h3 {
+            margin-bottom: 8px;
+        }
+
+        .video-placeholder p {
+            color: #777777;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           RESOURCES
+           ========================================================= */
+
+        .resources-section {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .resources-section .section-heading h2 {
+            color: #ffffff;
+        }
+
+        .resources-section .section-heading p {
+            color: #bbbbbb;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: #1c1c1c;
+            border: 1px solid #303030;
+            border-radius: 15px;
+            padding: 28px;
+            transition: 0.2s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #c8102e;
+            transform: translateY(-4px);
+        }
+
+        .resource-icon {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .resource-card p {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .resource-link {
+            color: #ff5a72;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           LOCAL ADVERTISING
+           ========================================================= */
+
+        .advertising-section {
+            background: #fff7f8;
+        }
+
+        .advertising-box {
+            border: 2px solid #f0cbd1;
+            border-radius: 20px;
+            padding: 38px;
+            background: #ffffff;
+        }
+
+        .advertising-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .advertising-header h2 {
+            font-size: 32px;
+            color: #111111;
+        }
+
+        .advertising-header p {
+            color: #666666;
+            max-width: 650px;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .sponsor-card {
+            min-height: 170px;
+            border: 1px dashed #d7d7d7;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .sponsor-card strong {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .sponsor-card span {
+            color: #888888;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           ABOUT
+           ========================================================= */
+
+        .about-section {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-logo img {
+            width: min(280px, 80%);
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.12));
+        }
+
+        .about-content h2 {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            color: #111111;
+        }
+
+        .about-content p {
+            color: #666666;
+            margin-bottom: 15px;
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .about-point {
+            padding: 14px;
+            background: #fafafa;
+            border-left: 3px solid #c8102e;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* =========================================================
+           CTA
+           ========================================================= */
+
+        .cta-section {
+            padding: 55px 0;
+        }
+
+        .cta-box {
+            background: #c8102e;
+            border-radius: 20px;
+            padding: 45px;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .cta-box h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .cta-box p {
+            color: #ffe8ec;
+        }
+
+        .cta-box .btn {
+            background: #ffffff;
+            color: #111111;
+            flex-shrink: 0;
+        }
+
+        .cta-box .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: #0b0b0b;
+            color: #ffffff;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.7fr 0.9fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            max-width: 330px;
+        }
+
+        .footer-brand img {
+            width: 75px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .footer-column h4 {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 9px;
+        }
+
+        .footer-column a {
+            color: #999999;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #292929;
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                max-width: 600px;
+            }
+
+            .classes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .advanced-grid,
+            .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-logo {
+                order: 2;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 760px) {
+
+            .top-bar-inner {
+                justify-content: center;
+            }
+
+            .top-bar-inner span {
+                display: none;
+            }
+
+            .navbar {
+                min-height: 72px;
+            }
+
+            .brand-logo {
+                width: 52px;
+                height: 52px;
+            }
+
+            .brand-name {
+                font-size: 22px;
+            }
+
+            .brand-tagline {
+                font-size: 10px;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 72px;
+                background: #ffffff;
+                border-bottom: 1px solid #eeeeee;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                display: none;
+                box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-top: 1px solid #f0f0f0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 15px 5%;
+            }
+
+            .youtube-nav {
+                border-radius: 0;
+                margin: 0;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-card {
+                min-height: 280px;
+                padding: 30px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .classes-grid,
+            .advanced-grid,
+            .resources-grid,
+            .sponsor-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .youtube-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .advertising-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .advertising-box {
+                padding: 25px;
+            }
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 32px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         TOP BAR
+         ========================================================= -->
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span>Mathematics learning made clear, logical and accessible.</span>
+
+            <a href="https://www.youtube.com/c/mathlogicpk"
+               target="_blank"
+               rel="noopener">
+                Visit MathLogic on YouTube →
+            </a>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+
+                <img src="images/logo.jpg"
+                     alt="MathLogic Logo"
+                     class="brand-logo">
+
+                <div class="brand-text">
+                    <div class="brand-name">
+                        Math<span>Logic</span>
+                    </div>
+
+                    <div class="brand-tagline">
+                        Mathematics • Logic • Understanding
+                    </div>
+                </div>
+
+            </a>
+
+
+            <button class="menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#classes">Classes</a>
+                    </li>
+
+                    <li>
+                        <a href="#youtube">YouTube</a>
+                    </li>
+
+                    <li>
+                        <a href="#resources">Resources</a>
+                    </li>
+
+                    <li>
+                        <a href="#advertise">Advertise</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a class="youtube-nav"
+                           href="https://www.youtube.com/c/mathlogicpk"
+                           target="_blank"
+                           rel="noopener">
+                            YouTube Channel
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HOME / HERO
+             ===================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="hero-badge">
+                        ✦ Mathematics • Logic • Understanding
+                    </div>
+
+                    <h1>
+                        Understand
+                        <span>Mathematics.</span>
+                        <br>
+                        Don't Just Memorize It.
+                    </h1>
+
+                    <p class="hero-description">
+                        Welcome to MathLogic — a mathematics learning platform
+                        supporting students through clear explanations,
+                        worked examples, lectures, notes and problem-solving
+                        resources.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#classes"
+                           class="btn btn-primary">
+                            Explore Classes
+                        </a>
+
+                        <a href="https://www.youtube.com/c/mathlogicpk"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-dark">
+                            ▶ Watch on YouTube
+                        </a>
+
+                        <a href="#resources"
+                           class="btn btn-outline">
+                            Explore Resources
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="math-symbol">
+                            f(x)
+                        </div>
+
+                        <h2>
+                            Mathematics becomes easier
+                            when you understand the logic.
+                        </h2>
+
+                        <p>
+                            Learn the reason behind the method —
+                            not just the steps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GOOGLE ADSENSE / TOP AD
+             ===================================================== -->
+
+        <div class="container">
+
+            <div class="ad-container large">
+                Advertisement
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CLASSES
+             ===================================================== -->
+
+        <section class="classes-section" id="classes">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Learning Paths
+                    </div>
+
+                    <h2>
+                        Mathematics for Every Level
+                    </h2>
+
+                    <p>
+                        Choose your level and explore lectures,
+                        explanations, notes and practice material.
+                    </p>
+
+                </div>
+
+
+                <div class="classes-grid">
+
+
+                    <article class="class-card">
+
+                        <div class="class-number">
+                            09
+                        </div>
+
+                        <h3>
+                            Class 9 Mathematics
+                        </h3>
+
+                        <p>
+                            Build strong mathematical foundations
+                            with clear concepts and examples.
+                        </p>
+
+                        <a href="#resources"
+                           class="card-link">
+                            Explore Class 9 →
+                        </a>
+
+                    </article>
+
+
+                    <article class="class-card">
+
+                        <div class="class-number">
+                            10
+                        </div>
+
+                        <h3>
+                            Class 10 Mathematics
+                        </h3>
+
+                        <p>
+                            Strengthen concepts and prepare for
+                            examinations with focused learning.
+                        </p>
+
+                        <a href="#resources"
+                           class="card-link">
+                            Explore Class 10 →
+                        </a>
+
+                    </article>
+
+
+                    <article class="class-card">
+
+                        <div class="class-number">
+                            11
+                        </div>
+
+                        <h3>
+                            Class 11 Mathematics
+                        </h3>
+
+                        <p>
+                            Algebra, equations, functions and
+                            advanced mathematical concepts.
+                        </p>
+
+                        <a href="#resources"
+                           class="card-link">
+                            Explore Class 11 →
+                        </a>
+
+                    </article>
+
+
+                    <article class="class-card">
+
+                        <div class="class-number">
+                            12
+                        </div>
+
+                        <h3>
+                            Class 12 Mathematics
+                        </h3>
+
+                        <p>
+                            Develop exam confidence through
+                            concepts, examples and problem solving.
+                        </p>
+
+                        <a href="#resources"
+                           class="card-link">
+                            Explore Class 12 →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ADVERTISEMENT
+             ===================================================== -->
+
+        <div class="container">
+
+            <div class="ad-container">
+                Advertisement
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             UNIVERSITY / PREPARATION
+             ===================================================== -->
+
+        <section class="advanced-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Higher Education & Careers
+                    </div>
+
+                    <h2>
+                        Beyond School Mathematics
+                    </h2>
+
+                    <p>
+                        Resources for university students and
+                        mathematics-related competitive examinations.
+                    </p>
+
+                </div>
+
+
+                <div class="advanced-grid">
+
+
+                    <article class="advanced-card">
+
+                        <div class="advanced-icon">
+                            ∑
+                        </div>
+
+                        <h3>
+                            BS Mathematics
+                        </h3>
+
+                        <p>
+                            Explore university-level mathematics,
+                            concepts, examples and problem solving.
+                        </p>
+
+                    </article>
+
+
+                    <article class="advanced-card">
+
+                        <div class="advanced-icon">
+                            { }
+                        </div>
+
+                        <h3>
+                            BS Computer Science
+                        </h3>
+
+                        <p>
+                            Mathematics resources relevant to
+                            computer science and related university courses.
+                        </p>
+
+                    </article>
+
+
+                    <article class="advanced-card">
+
+                        <div class="advanced-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            PPSC Lecturer Preparation
+                        </h3>
+
+                        <p>
+                            Mathematics preparation resources for
+                            lecturer and competitive examination candidates.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             YOUTUBE
+             ===================================================== -->
+
+        <section class="youtube-section" id="youtube">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        MathLogic on YouTube
+                    </div>
+
+                    <h2>
+                        Learn Through Video
+                    </h2>
+
+                    <p>
+                        Follow MathLogic on YouTube for mathematics
+                        lectures, explanations and problem solving.
+                    </p>
+
+                </div>
+
+
+                <div class="youtube-layout">
+
+
+                    <div class="youtube-box">
+
+                        <div class="youtube-play">
+                            ▶
+                        </div>
+
+                        <h3>
+                            MathLogic YouTube Channel
+                        </h3>
+
+                        <p>
+                            Watch mathematics lessons designed to
+                            explain not only how to solve a problem,
+                            but why the method works.
+                        </p>
+
+                        <a href="https://www.youtube.com/c/mathlogicpk"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-primary">
+                            Visit YouTube Channel
+                        </a>
+
+                    </div>
+
+
+                    <div class="video-placeholder">
+
+                        <div class="video-placeholder-inner">
+
+                            <div class="video-placeholder-icon">
+                                ▶
+                            </div>
+
+                            <h3>
+                                Latest YouTube Videos
+                            </h3>
+
+                            <p>
+                                Your latest MathLogic lectures will
+                                appear here. Video links can be added
+                                as the website grows.
+                            </p>
+
+                            <br>
+
+                            <a href="https://www.youtube.com/c/mathlogicpk"
+                               target="_blank"
+                               rel="noopener"
+                               class="btn btn-outline">
+                                View Latest Videos
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTENT AD
+             ===================================================== -->
+
+        <div class="container">
+
+            <div class="ad-container large">
+                Advertisement
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RESOURCES
+             ===================================================== -->
+
+        <section class="resources-section" id="resources">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        MathLogic Resources
+                    </div>
+
+                    <h2>
+                        Learn. Practice. Understand.
+                    </h2>
+
+                    <p>
+                        A growing collection of mathematics resources
+                        for students at different levels.
+                    </p>
+
+                </div>
+
+
+                <div class="resources-grid">
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            📘
+                        </div>
+
+                        <h3>
+                            Mathematics Notes
+                        </h3>
+
+                        <p>
+                            Concise notes covering important concepts,
+                            formulas and methods.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            ✎
+                        </div>
+
+                        <h3>
+                            Solved Examples
+                        </h3>
+
+                        <p>
+                            Step-by-step solutions designed to help
+                            students understand the underlying logic.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            ∑
+                        </div>
+
+                        <h3>
+                            Important Formulas
+                        </h3>
+
+                        <p>
+                            Useful mathematics formulas organized
+                            for quick revision and reference.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            ?
+                        </div>
+
+                        <h3>
+                            Practice Questions
+                        </h3>
+
+                        <p>
+                            Practice mathematics problems and develop
+                            confidence through active problem solving.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            🎓
+                        </div>
+
+                        <h3>
+                            Exam Preparation
+                        </h3>
+
+                        <p>
+                            Focused material for students preparing
+                            for school, university and competitive exams.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                    <article class="resource-card">
+
+                        <div class="resource-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            Concept Explanations
+                        </h3>
+
+                        <p>
+                            Understand mathematical ideas through
+                            clear explanations and examples.
+                        </p>
+
+                        <a href="#"
+                           class="resource-link">
+                            Coming Soon →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOCAL EDUCATIONAL ADVERTISING
+             ===================================================== -->
+
+        <section class="advertising-section" id="advertise">
+
+            <div class="container">
+
+                <div class="advertising-box">
+
+                    <div class="advertising-header">
+
+                        <div>
+
+                            <div class="section-label">
+                                Educational Partners
+                            </div>
+
+                            <h2>
+                                Advertise Your Institution
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Are you a school, college, academy,
+                            university, tuition centre or educational
+                            institution? Promote your educational
+                            services to students visiting MathLogic.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sponsor-grid">
+
+
+                        <div class="sponsor-card">
+
+                            <strong>
+                                Your Institution
+                            </strong>
+
+                            <span>
+                                Premium educational advertisement
+                            </span>
+
+                        </div>
+
+
+                        <div class="sponsor-card">
+
+                            <strong>
+                                Your Academy
+                            </strong>
+
+                            <span>
+                                Reach mathematics students
+                            </span>
+
+                        </div>
+
+
+                        <div class="sponsor-card">
+
+                            <strong>
+                                Your Educational Program
+                            </strong>
+
+                            <span>
+                                Contact MathLogic for advertising
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+             ===================================================== -->
+
+        <section class="about-section" id="about">
+
+            <div class="container about-grid">
+
+
+                <div class="about-logo">
+
+                    <img src="images/logo.jpg"
+                         alt="MathLogic">
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <div class="section-label">
+                        About MathLogic
+                    </div>
+
+                    <h2>
+                        Mathematics With Logic,
+                        Not Just Rules.
+                    </h2>
+
+                    <p>
+                        MathLogic is an educational platform built
+                        around a simple idea: mathematics becomes much
+                        easier when students understand the reasoning
+                        behind the methods they use.
+                    </p>
+
+                    <p>
+                        The platform supports students through video
+                        lectures, mathematical explanations, notes,
+                        solved examples and practice resources.
+                    </p>
+
+                    <div class="about-points">
+
+                        <div class="about-point">
+                            ✓ Clear explanations
+                        </div>
+
+                        <div class="about-point">
+                            ✓ Step-by-step solutions
+                        </div>
+
+                        <div class="about-point">
+                            ✓ Concept-based learning
+                        </div>
+
+                        <div class="about-point">
+                            ✓ School & university mathematics
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL ADVERTISEMENT
+             ===================================================== -->
+
+        <div class="container">
+
+            <div class="ad-container">
+                Advertisement
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CTA
+             ===================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+
+                        <h2>
+                            Ready to Learn Mathematics?
+                        </h2>
+
+                        <p>
+                            Explore MathLogic and start understanding
+                            mathematics with greater clarity.
+                        </p>
+
+                    </div>
+
+                    <a href="https://www.youtube.com/c/mathlogicpk"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn">
+                        Visit MathLogic YouTube
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <img src="images/logo.jpg"
+                         alt="MathLogic Logo">
+
+                    <h3>
+                        MathLogic
+                    </h3>
+
+                    <p>
+                        Mathematics • Logic • Understanding
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Mathematics learning resources for school,
+                        university and competitive examination students.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Classes
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="#classes">
+                                Class 9
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#classes">
+                                Class 10
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#classes">
+                                Class 11
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#classes">
+                                Class 12
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Resources
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="#resources">
+                                Mathematics Notes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#resources">
+                                Solved Examples
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#resources">
+                                Formulas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#resources">
+                                Practice Questions
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        MathLogic
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#advertise">
+                                Advertise
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.youtube.com/c/mathlogicpk"
+                               target="_blank"
+                               rel="noopener">
+                                YouTube
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#home">
+                                Back to Top ↑
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div>
+                    © 2026 MathLogic.pk. All rights reserved.
+                </div>
+
+                <div>
+                    Mathematics • Logic • Understanding
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         MOBILE NAVIGATION JAVASCRIPT
+         ========================================================= -->
+
+    <script>
+
+        const menuButton = document.getElementById("menuButton");
+        const navLinks = document.getElementById("navLinks");
+
+        menuButton.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+            const isOpen = navLinks.classList.contains("active");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+
+            menuButton.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+
+        /* Close mobile menu after clicking a navigation link */
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+                menuButton.setAttribute("aria-expanded", "false");
+
+                menuButton.textContent = "☰";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
