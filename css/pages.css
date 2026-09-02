@@ -1,0 +1,683 @@
+
+/*  Page Hero */
+
+.page-hero {
+    padding: 45px 0 40px;
+    background: linear-gradient(135deg, #f4f8ff, #ffffff);
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.page-hero h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.page-intro {
+    max-width: 760px;
+    margin: 0 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ---------- Units Section ---------- */
+
+.units-section {
+    padding: 20px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    margin: 0 0 14px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.section-heading p {
+    line-height: 1.7;
+}
+
+
+/* ---------- Unit Card ---------- */
+
+.unit-card {
+    margin-bottom: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+.unit-header {
+    padding: 20px 28px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.unit-header:hover {
+    background: #f1f5f9;
+}
+
+.unit-number {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.unit-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    line-height: 1.5;
+
+    overflow-wrap: break-word;
+}
+
+.lecture-table th {
+    background: #f8fafc;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.lecture-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.lecture-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.coming-soon {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.lecture-table a {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+/* ---------- Lecture Table ---------- */
+
+.lecture-table-wrapper {
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+
+}
+
+
+.lecture-table {
+
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+}
+
+
+.lecture-table th,
+.lecture-table td {
+
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    line-height: 1.5;
+    vertical-align: top;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+}
+
+
+/* Table Header */
+
+.lecture-table th {
+
+    background: #f8fafc;
+    color: #1e293b;
+    font-weight: 700;
+
+}
+
+
+/* Lecture Column */
+
+.lecture-table th:first-child,
+.lecture-table td:first-child {
+
+    width: 20%;
+    white-space: nowrap;
+
+}
+
+
+/* Topic Column */
+
+.lecture-table th:nth-child(2),
+.lecture-table td:nth-child(2) {
+
+    width: 80%;
+    white-space: normal;
+
+}
+
+
+/* Lecture Links */
+
+.lecture-table td a {
+
+    color: #2563eb;
+    text-decoration: underline;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+}
+
+
+/* Hover Effect */
+
+.lecture-table tbody tr:hover {
+
+    background: #f8fafc;
+
+}
+
+
+/* =========================================================
+   MOBILE LECTURE TABLE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .lecture-table-wrapper {
+
+        width: 100%;
+        overflow-x: hidden;
+
+    }
+
+
+    .lecture-table {
+
+        width: 100%;
+        max-width: 100%;
+        table-layout: fixed;
+
+    }
+
+
+    .lecture-table thead {
+
+        display: table-header-group;
+
+    }
+
+
+    .lecture-table th,
+    .lecture-table td {
+
+        padding: 10px 4px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        vertical-align: top;
+        min-width: 0;
+
+
+    }
+
+
+    /* Table heading */
+
+    .lecture-table th {
+
+        font-size: 0.85rem;
+        font-weight: 700;
+
+    }
+
+
+    /* Lecture column */
+
+    .lecture-table th:first-child,
+    .lecture-table td:first-child {
+
+        width: 20%;
+        white-space: normal;
+        font-size: 0.8rem;
+        font-weight: 600;
+
+    }
+
+
+    /* Topic column */
+
+    .lecture-table th:nth-child(2),
+    .lecture-table td:nth-child(2) {
+
+        
+        width: 80%;
+        min-width: 0;
+        white-space: normal;
+        max-width: 0;
+
+
+    }
+
+
+    /* Topic links */
+
+    .lecture-table td a {
+
+        display: block;
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+
+    }
+
+    .lecture-table {
+
+        word-break: normal;
+
+    }
+
+}
+
+/* ---------- Unit Resources ---------- */
+
+.unit-resources {
+    padding: 15px 28px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.unit-resources h3 {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+}
+
+.unit-resources p {
+    margin: 0 0 11px;
+    line-height: 1.6;
+}
+
+.resource-button {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.primary-button,
+.secondary-button,
+.resource-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.primary-button {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.secondary-button {
+    background: #ffffff;
+    color: #1d4ed8;
+    border: 1px solid #cbd5e1;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.resource-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   14. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .container {
+        width: min(94%, 1180px);
+    }
+
+    .hero-content h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-highlight {
+        padding: 12px;
+    }
+
+    .hero-visual {
+        min-height: 290px;
+    }
+
+    .hero-main-card {
+        width: 78%;
+        padding: 30px 20px;
+    }
+
+    .math-card {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    .classes-grid,
+    .youtube-videos,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youtube-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resource-card {
+        padding: 19px;
+    }
+
+    .local-ad-section {
+        padding: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+
+
+    /* ---------- Future Units ---------- */
+
+.future-units {
+    margin-top: 50px;
+    padding: 35px;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.future-units h2 {
+    margin: 0 0 10px;
+}
+
+.future-units p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.future-unit-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.future-unit-list span {
+    padding: 8px 14px;
+    background: #ffffff;
+    border: 1px solid #dbe3ec;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+}
+
+/* ---------- SEO Content ---------- */
+
+.seo-content {
+    padding: 65px 0;
+    background: #ffffff;
+}
+
+.seo-content h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.seo-content p {
+    max-width: 850px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+/* ---------- Page Navigation ---------- */
+
+.page-navigation {
+    padding: 65px 0;
+    background: #f8fafc;
+}
+
+.page-navigation h2 {
+    margin-bottom: 28px;
+}
+
+.navigation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.navigation-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.navigation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.navigation-card strong {
+    font-size: 1.05rem;
+}
+
+.navigation-card span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CLASS 11 RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navigation-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .page-hero {
+        padding: 25px 0 30px;
+    }
+
+    .page-intro {
+        font-size: 1rem;
+    }
+
+    .page-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+    .units-section {
+        padding: 50px 0;
+    }
+
+    .unit-header {
+        padding: 20px;
+    }
+
+    .unit-resources {
+        padding: 20px;
+    }
+
+    .future-units {
+        padding: 25px 18px;
+    }
+
+    .seo-content {
+        padding: 50px 0;
+    }
+
+    .page-navigation {
+        padding: 50px 0;
+    }
+
+}
+
+
+/* =========================================================
+   CLASS 11 FOOTER
+   ========================================================= */
+
+.footer-content {
+
+    display: grid;
+
+    /*grid-template-columns: 1fr 180px;*/
+
+    gap: 50px;
+
+    align-items: start;
+
+}
+
+
+.footer-content h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 1.35rem;
+
+}
+
+
+.footer-content p {
+
+    margin: 0;
+
+    color: #b9c8d8;
+
+    font-size: 0.88rem;
+
+} 
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: #b9c8d8;
+
+    font-size: 0.84rem;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #ffffff;
+
+}
+
+/* Temperay */
+
+
