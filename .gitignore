@@ -3,3 +3,6 @@ backups/
 desktop.ini
 *.docx
 *.xlsx
+.vercel
+.env*
+
