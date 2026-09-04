@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", async function () {
-
+async function loadYoutubeVideos() {
     try {
 
 
@@ -128,4 +127,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     }
 
-});
+}

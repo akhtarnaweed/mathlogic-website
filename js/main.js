@@ -92,17 +92,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    async function loadAllComponents() {
+ async function loadAllComponents() {
 
-        for (const component of components) {
+    for (const component of components) {
 
-            await loadComponent(component);
+        await loadComponent(component);
 
-        }
+    }
+
+
+    if (typeof loadYoutubeVideos === "function") {
+
+        loadYoutubeVideos();
+
+    }
 
 
         initializeMobileMenu();
-
         initializeDropdown();
 
         initializeCurrentYear();
