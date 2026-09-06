@@ -297,165 +297,811 @@ section {
    ========================================================= */
 
 .hero-section {
-    padding: 92px 0 85px;
+    padding: 78px 0 75px;
+
     background:
-        radial-gradient(circle at 85% 20%, rgba(56, 148, 219, 0.12), transparent 30%),
-        linear-gradient(135deg, #eef7ff 0%, #ffffff 55%, #f7fbff 100%);
+        radial-gradient(
+            circle at 86% 25%,
+            rgba(55, 145, 220, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f2f9ff 0%,
+            #ffffff 55%,
+            #f8fbff 100%
+        );
+
     overflow: hidden;
 }
 
+
+/* =========================================================
+   HERO LAYOUT
+   ========================================================= */
+
 .hero-container {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+
     align-items: center;
-    gap: 65px;
 }
 
 .hero-content {
+    min-width: 0;
+
     max-width: 680px;
 }
 
+
+/* =========================================================
+   HERO LABEL
+   ========================================================= */
+
 .hero-label {
     display: inline-block;
+
     margin-bottom: 15px;
-    padding: 6px 11px;
+    padding: 5px 10px;
+
     border-radius: 20px;
-    background: #dff1ff;
+
+    background: #e1f2ff;
+
     color: #1264b4;
-    font-size: 0.76rem;
+
+    font-size: 0.68rem;
     font-weight: 800;
+
     letter-spacing: 0.7px;
+
     text-transform: uppercase;
 }
 
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
 .hero-content h1 {
-    color: #102c4c;
-    font-size: clamp(2.45rem, 5vw, 4.25rem);
-    line-height: 1.05;
-    letter-spacing: -1.5px;
     margin-bottom: 22px;
+
+    color: #102f52;
+
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+
+    line-height: 1.02;
+
+    letter-spacing: -1.8px;
 }
 
 .hero-content h1 span {
     display: block;
+
     color: #1474c4;
 }
 
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
 .hero-description {
-    max-width: 600px;
+    max-width: 620px;
+
     margin-bottom: 28px;
-    color: #5d6c80;
-    font-size: 1.08rem;
+
+    color: #5e7085;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
 }
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
 
 .hero-buttons {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 12px;
-    margin-bottom: 35px;
+
+    margin-bottom: 32px;
 }
+
+
+/* =========================================================
+   LEARNING PATH CARDS
+   ========================================================= */
 
 .hero-highlights {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    width: 100%;
 }
+
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
 
 .hero-highlight {
-    padding: 14px;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid #dce8f4;
-    border-radius: 9px;
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 108px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 48px 12px 12px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
-.hero-highlight strong,
-.hero-highlight span {
+
+/* =========================================================
+   CLASS 11 CARD
+   ========================================================= */
+
+.hero-highlight-class11 {
+    background: #f0f8ff;
+
+    border: 1px solid #c6e2fa;
+
+    box-shadow:
+        0 5px 18px rgba(30, 115, 180, 0.05);
+}
+
+.hero-highlight-class11:hover {
+    background: #e9f4ff;
+
+    border-color: #83bff0;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(30, 115, 180, 0.13);
+}
+
+
+/* =========================================================
+   BS MATHEMATICS CARD
+   ========================================================= */
+
+.hero-highlight-bs {
+    background: #f7f4ff;
+
+    border: 1px solid #ded6ff;
+
+    box-shadow:
+        0 5px 18px rgba(80, 65, 180, 0.045);
+}
+
+.hero-highlight-bs:hover {
+    background: #f0ecff;
+
+    border-color: #aaa0f5;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(80, 65, 180, 0.13);
+}
+
+
+/* =========================================================
+   PPSC CARD
+   ========================================================= */
+
+.hero-highlight-ppsc {
+    background: #fff7f7;
+
+    border: 1px solid #f1d5d5;
+
+    box-shadow:
+        0 5px 18px rgba(190, 45, 60, 0.04);
+}
+
+.hero-highlight-ppsc:hover {
+    background: #fff0f0;
+
+    border-color: #edaaaa;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(190, 45, 60, 0.12);
+}
+
+
+/* =========================================================
+   CLASS 11 BOOK
+   ========================================================= */
+
+.hero-highlight-book {
+    width: 54px;
+
+    height: 78px;
+
+    flex: 0 0 54px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(20, 55, 90, 0.14);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.hero-highlight-book img {
+    width: 100%;
+
+    height: 100%;
+
     display: block;
+
+    object-fit: cover;
 }
 
-.hero-highlight strong {
+.hero-highlight-class11:hover .hero-highlight-book {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.hero-highlight-icon {
+    width: 52px;
+
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #e2f0ff;
+
+    color: #1264b4;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 10px rgba(30, 80, 120, 0.07);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.hero-highlight-bs .hero-highlight-icon {
+    background: #e2ddff;
+
+    color: #5144d8;
+}
+
+.hero-highlight-ppsc .hero-highlight-icon {
+    background: #ffe0e0;
+
+    color: #cf2638;
+}
+
+.hero-highlight:hover .hero-highlight-icon {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.hero-highlight-content {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+/* ---------- Card Title ---------- */
+
+.hero-highlight-content strong {
+    display: block;
+
+    margin-bottom: 5px;
+
     color: #173d66;
-    font-size: 0.86rem;
+
+    font-size: clamp(0.70rem, 1vw, 0.87rem);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
-.hero-highlight span {
-    margin-top: 3px;
-    color: #718096;
-    font-size: 0.72rem;
+
+/* Keep Class 11 together */
+
+.hero-highlight-class11
+.hero-highlight-content strong {
+    white-space: nowrap;
 }
+
+
+/* ---------- Card Subtitle ---------- */
+
+.hero-highlight-content span {
+    display: block;
+
+    color: #6c7e93;
+
+    font-size: clamp(0.58rem, 0.8vw, 0.68rem);
+
+    line-height: 1.35;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   CHEVRON ARROW
+   ========================================================= */
+
+.hero-highlight-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    right: 13px;
+
+    z-index: 3;
+
+    width: 20px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    color: #68717c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* ---------- Arrow Hover ---------- */
+
+.hero-highlight-class11:hover
+.hero-highlight-arrow {
+    color: #1474c4;
+
+    transform: translate(3px, -50%);
+}
+
+.hero-highlight-bs:hover
+.hero-highlight-arrow {
+    color: #5748dd;
+
+    transform: translate(3px, -50%);
+}
+
+.hero-highlight-ppsc:hover
+.hero-highlight-arrow {
+    color: #d52b42;
+
+    transform: translate(3px, -50%);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
 
 .hero-visual {
     position: relative;
-    min-height: 410px;
+
+    min-height: 420px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+    transform: translateY(-65px);
 }
+
+
+/* =========================================================
+   MAIN MATHEMATICS CARD
+   ========================================================= */
 
 .hero-main-card {
     position: relative;
     z-index: 2;
-    width: min(320px, 80%);
-    padding: 40px 30px;
+
+    box-sizing: border-box;
+
+    padding: clamp(25px, 4vw, 40px)
+             clamp(20px, 3vw, 30px);
+
     background: #ffffff;
-    border: 1px solid #dce7f2;
+
+    border: 1px solid #dce8f3;
+
     border-radius: 18px;
+
     text-align: center;
-    box-shadow: 0 22px 55px rgba(25, 65, 105, 0.13);
+
+    box-shadow:
+        0 22px 55px rgba(25, 65, 105, 0.12);
 }
+
+
+/* =========================================================
+   SIGMA
+   ========================================================= */
 
 .hero-card-symbol {
-    width: 78px;
-    height: 78px;
+    width: 76px;
+
+    height: 76px;
+
     margin: 0 auto 18px;
+
     display: grid;
+
     place-items: center;
+
     border-radius: 50%;
+
     background: #e4f3ff;
+
     color: #1264b4;
-    font-size: 2.5rem;
-    font-weight: 700;
+
+    font-size: 2.45rem;
 }
 
+
+/* =========================================================
+   MAIN CARD TEXT
+   ========================================================= */
+
 .hero-main-card h2 {
+    margin-bottom: 10px;
+
     color: #153b62;
-    font-size: 1.6rem;
-    margin-bottom: 9px;
+
+    font-size: 1.55rem;
 }
 
 .hero-main-card p {
     color: #6c7b8e;
+
     font-size: 0.9rem;
+
+    line-height: 1.55;
 }
+
+.hero-main-card p strong {
+    color: #1474c4;
+}
+
+
+/* =========================================================
+   FLOATING EQUATIONS
+   ========================================================= */
 
 .math-card {
     position: absolute;
+
     z-index: 1;
-    padding: 13px 18px;
+
+    padding: 12px 17px;
+
     background: #ffffff;
-    border: 1px solid #dce7f2;
+
+    border: 1px solid #dce8f3;
+
     border-radius: 9px;
-    color: #1d5d93;
+
+    color: #1c609b;
+
+    font-size: 0.85rem;
+
     font-weight: 700;
-    box-shadow: 0 10px 25px rgba(20, 60, 100, 0.1);
+
+    box-shadow:
+        0 9px 23px rgba(20, 60, 100, 0.09);
 }
 
 .math-card-one {
-    top: 40px;
+    top: 42px;
+
     left: 2%;
+
     transform: rotate(-7deg);
 }
 
 .math-card-two {
     top: 15px;
+
     right: 5%;
+
     transform: rotate(7deg);
 }
 
 .math-card-three {
-    bottom: 48px;
     right: 0;
+
+    bottom: 50px;
+
     transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   DOT GRID
+   ========================================================= */
+
+.hero-dot-grid {
+    position: absolute;
+
+    right: -18px;
+
+    bottom: 8px;
+
+    width: 105px;
+
+    height: 75px;
+
+    opacity: 0.42;
+
+    background-image:
+        radial-gradient(
+            #8fc8f4 1.7px,
+            transparent 1.7px
+        );
+
+    background-size: 18px 18px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE — MEDIUM
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+        gap: 35px;
+    }
+
+    .hero-highlights {
+        gap: 9px;
+    }
+
+    .hero-highlight {
+        min-height: 100px;
+
+        gap: 8px;
+
+        padding: 10px 42px 10px 9px;
+    }
+
+    .hero-highlight-book {
+        width: 46px;
+
+        height: 66px;
+
+        flex-basis: 46px;
+    }
+
+    .hero-highlight-icon {
+        width: 43px;
+
+        height: 43px;
+
+        flex-basis: 43px;
+
+        font-size: 1.15rem;
+    }
+
+    .hero-highlight-content strong {
+        font-size: 0.72rem;
+    }
+
+    .hero-highlight-content span {
+        font-size: 0.58rem;
+    }
+
+    .hero-highlight-arrow {
+        right: 10px;
+
+        font-size: 1.8rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET / SMALL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+    .hero-highlights {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .hero-highlight {
+        min-height: 96px;
+    }
+
+    .hero-highlight-content strong {
+        font-size: 0.78rem;
+    }
+
+    .hero-highlight-content span {
+        font-size: 0.62rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        text-align: left;
+    }
+
+    .hero-highlight {
+        min-height: 82px;
+
+        padding: 10px 48px 10px 12px;
+    }
+
+    .hero-highlight-book {
+        width: 50px;
+
+        height: 66px;
+
+        flex-basis: 50px;
+    }
+
+    .hero-highlight-icon {
+        width: 48px;
+
+        height: 48px;
+
+        flex-basis: 48px;
+    }
+
+    .hero-highlight-content strong {
+        font-size: 0.9rem;
+    }
+
+    .hero-highlight-content span {
+        font-size: 0.72rem;
+    }
+
+    .hero-highlight-arrow {
+        right: 14px;
+
+        font-size: 2rem;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+    }
+
+    .hero-dot-grid {
+        right: 0;
+    }
 }
 
 
@@ -1119,8 +1765,6 @@ section {
 }
 
 
-
-}
 /* =========================================================
    CLASS 11 PAGE
    ========================================================= */
@@ -1325,4 +1969,245 @@ section {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+
+/* =========================================================
+   HERO — BALANCED DESKTOP LAYOUT
+   ========================================================= */
+
+.hero-container {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+    gap: 35px;
+}
+
+
+/* Give the right visual a smaller working area */
+
+.hero-visual {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* Mathematics card must shrink with its column */
+
+.hero-main-card {
+    width: min(330px, 75%);
+    max-width: 330px;
+}
+
+
+/* Keep learning cards readable */
+
+.hero-highlight-content {
+    min-width: 0;
+    flex: 1 1 0;
+}
+
+
+/* =========================================================
+   MEDIUM SCREENS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+        gap: 25px;
+    }
+
+    .hero-main-card {
+        width: min(290px, 75%);
+        max-width: 290px;
+    }
+
+    .hero-highlight-content strong {
+        font-size: 0.72rem;
+    }
+
+    .hero-highlight-content span {
+        font-size: 0.58rem;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-main-card {
+        width: min(330px, 80%);
+        max-width: 330px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-highlight-content strong {
+        font-size: 0.9rem;
+    }
+
+    .hero-highlight-content span {
+        font-size: 0.72rem;
+    }
+}
+
+
+/* =========================
+   PPSC NOTES CARD
+========================== */
+
+.ppsc-notes-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin: 0 0 36px;
+    padding: 28px 32px;
+
+    background: #ffffff;
+    border: 1px solid #dbe5f0;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(20, 60, 100, 0.06);
+}
+
+
+.ppsc-notes-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #e8f3ff;
+    border-radius: 16px;
+
+    font-size: 2.4rem;
+}
+
+
+.ppsc-notes-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.ppsc-notes-content .section-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #1672c8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.ppsc-notes-content h2 {
+    margin: 0 0 8px;
+
+    color: #102f56;
+    font-size: 1.8rem;
+}
+
+
+.ppsc-notes-content p {
+    margin: 0 0 18px;
+
+    color: #58708c;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.ppsc-notes-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    background: #176fc1;
+    color: #ffffff;
+
+    border: 1px solid #176fc1;
+    border-radius: 10px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.ppsc-notes-button span {
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+
+.ppsc-notes-button:hover {
+    background: #125da3;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 16px rgba(23, 111, 193, 0.2);
+}
+
+
+.ppsc-notes-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   MOBILE
+========================== */
+
+@media (max-width: 700px) {
+
+    .ppsc-notes-card {
+        align-items: flex-start;
+        gap: 18px;
+
+        padding: 22px;
+    }
+
+    .ppsc-notes-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 2rem;
+    }
+
+    .ppsc-notes-content h2 {
+        font-size: 1.45rem;
+    }
+
 }
