@@ -678,6 +678,135 @@
 
 }
 
+/* =========================
+   COURSE NOTES CARD
+========================== */
+
+.course-notes {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin: 0 0 22px;
+    padding: 16px 20px;
+
+    background: #f7fbff;
+    border: 1px solid #dbe7f2;
+    border-radius: 12px;
+}
+
+.course-notes-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #e8f3ff;
+    border-radius: 10px;
+
+    font-size: 1.55rem;
+}
+
+.course-notes-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-notes-content h3 {
+    margin: 0 0 4px;
+
+    color: #102f56;
+    font-size: 1.25rem;
+}
+
+.course-notes-content p {
+    margin: 0 0 10px;
+
+    color: #58708c;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.course-notes-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    background: #176fc1;
+    color: #ffffff;
+
+    border: 1px solid #176fc1;
+    border-radius: 8px;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.course-notes-button span {
+    font-size: 1.2rem;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.course-notes-button:hover {
+    background: #125da3;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(23, 111, 193, 0.18);
+}
+
+.course-notes-button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   MOBILE
+========================== */
+
+@media (max-width: 700px) {
+
+    .course-notes {
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .course-notes-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.4rem;
+    }
+
+    .course-notes-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .course-notes-content p {
+        font-size: 0.85rem;
+    }
+
+    .course-notes-button {
+        padding: 7px 12px;
+        font-size: 0.84rem;
+    }
+
+}
+
 /* Temperay */
 
 
